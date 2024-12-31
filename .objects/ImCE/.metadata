@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Create New Binder",
+  "Type": "App",
+  "Id": "ImCEyq8VUkCh8DJsePsgqw",
+  "Reference": "62i0BCUBcE-s_URqWJlPrw/ImCEyq8VUkCh8DJsePsgqw",
+  "Created": "2024-12-03T08:32:49.0760913Z",
+  "Updated": "2024-12-03T08:32:49.0760913Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.2.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

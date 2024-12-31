@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Create New Binder",
+  "Type": "Screen",
+  "Id": "_hJ4b3L4TEKOa8Spo6337A",
+  "Reference": "62i0BCUBcE-s_URqWJlPrw/_hJ4b3L4TEKOa8Spo6337A",
+  "ParentRef": "62i0BCUBcE-s_URqWJlPrw/JiOGE3NjVE-ZBF7Q8er9RA",
+  "Created": "2024-12-03T08:32:49.1167967Z",
+  "Updated": "2024-12-03T08:32:49.1167967Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.2.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

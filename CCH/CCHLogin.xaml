@@ -1,0 +1,368 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CCHLogin" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="CCHPassword" Type="InArgument(x:String)" />
+    <x:Property Name="CCHLoginID" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1793,2483</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1112,2418" sap2010:WorkflowViewState.IdRef="Sequence_48">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Wolters Kluwer Login" sap:VirtualizedContainerService.HintSize="1050,2330" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" ScopeGuid="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,2016" sap2010:WorkflowViewState.IdRef="Sequence_45">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="CCHCode" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Text="[CCHLoginID]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="e6c034e8-1d9c-48b6-9403-c12d84b15704" CvElementArea="87, 236, 563, 52" CvType="InputBox" DesignTimeRectangle="89, 238, 561, 48" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='usernametxt' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='usernametxt' type='text' tag='INPUT' class='form-control loginInput ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="bfa5ee2d-0adc-4c81-aad7-554231ff6ee3" InformativeScreenshot="c0360d384fc60034ab5ce75e7901d7b4.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="e6c034e8-1d9c-48b6-9403-c12d84b15704" CvTextArea="87, 212, 62, 16" CvTextArgument="User ID" CvType="Text" DesignTimeRectangle="89, 212, 61, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='User ID' class='loginInputTitle' parentid='axcessLoginForm' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='User ID' class='loginInputTitle' parentid='axcessLoginForm' type='' tag='SPAN' check:text='User ID' /&gt;" Guid="58363008-25cd-4a8d-9078-2cc2acb20cb7" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Text="[CCHPassword]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="89, 319, 561, 48" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' type='password' tag='INPUT' class='form-control loginInput ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="73f3b5a7-7b34-4bc4-88e4-30bdc0c0cd55" InformativeScreenshot="bd0565a78d9fbb776dd47573e79d8145.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="63de4632-b83b-471f-bf2f-030f89cf609d" CvTextArea="87, 293, 80, 16" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="89, 293, 79, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Password' class='loginInputTitle' parentid='axcessLoginForm' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Password' class='loginInputTitle' parentid='axcessLoginForm' type='' tag='SPAN' check:text='Password' /&gt;" Guid="85dc6ad0-e03b-414f-bba1-7c062f9d851d" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="954,271" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter Captcha Code" Title="CCH Captcha">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[CCHCode]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT captchaText'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Text="[CCHCode]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="9b08963a-3d28-4019-a021-a8f05affc568" CvElementArea="91, 555, 554, 40" CvType="InputBox" DesignTimeRectangle="92, 556, 555, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='captchaText' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='captchaText' type='text' tag='INPUT' class='form-control inptCaptcha ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched' placeholder='Enter text shown above' aaname='' /&gt;" Guid="e582813c-3902-486d-82e8-e140250dd7f6" InformativeScreenshot="1100944e11be928ceebd5761c797585a.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="0902ebe5-1cdf-4e44-8bd9-5f903d2deb8d" CvElementArea="86, 633, 570, 50" CvTextArea="340, 645, 63, 27" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="89, 635, 567, 46" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Login' tableRow='1' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Login' type='' tag='BUTTON' class='btn btn-primary loginButton' check:text='Login' /&gt;" Guid="c6b993de-5da1-4166-bf6a-3ca0452723d7" InformativeScreenshot="5ff69ebfb5959684fd68c65c5f5ea6c5.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Captcha expired.'" sap:VirtualizedContainerService.HintSize="954,354" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Text="[CCHLoginID]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="e6c034e8-1d9c-48b6-9403-c12d84b15704" CvElementArea="87, 236, 563, 52" CvType="InputBox" DesignTimeRectangle="89, 238, 561, 48" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='usernametxt' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='usernametxt' type='text' tag='INPUT' class='form-control loginInput ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="bfa5ee2d-0adc-4c81-aad7-554231ff6ee3" InformativeScreenshot="c0360d384fc60034ab5ce75e7901d7b4.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="e6c034e8-1d9c-48b6-9403-c12d84b15704" CvTextArea="87, 212, 62, 16" CvTextArgument="User ID" CvType="Text" DesignTimeRectangle="89, 212, 61, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='User ID' class='loginInputTitle' parentid='axcessLoginForm' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='User ID' class='loginInputTitle' parentid='axcessLoginForm' type='' tag='SPAN' check:text='User ID' /&gt;" Guid="58363008-25cd-4a8d-9078-2cc2acb20cb7" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Text="[CCHPassword]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="89, 319, 561, 48" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' type='password' tag='INPUT' class='form-control loginInput ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="73f3b5a7-7b34-4bc4-88e4-30bdc0c0cd55" InformativeScreenshot="bd0565a78d9fbb776dd47573e79d8145.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="63de4632-b83b-471f-bf2f-030f89cf609d" CvTextArea="87, 293, 80, 16" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="89, 293, 79, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Password' class='loginInputTitle' parentid='axcessLoginForm' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Password' class='loginInputTitle' parentid='axcessLoginForm' type='' tag='SPAN' check:text='Password' /&gt;" Guid="85dc6ad0-e03b-414f-bba1-7c062f9d851d" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="387.2,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter Captcha Code" Title="CCH Captcha">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[CCHCode]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT captchaText'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Text="[CCHCode]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="9b08963a-3d28-4019-a021-a8f05affc568" CvElementArea="91, 555, 554, 40" CvType="InputBox" DesignTimeRectangle="92, 556, 555, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='captchaText' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='captchaText' type='text' tag='INPUT' class='form-control inptCaptcha ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched' placeholder='Enter text shown above' aaname='' /&gt;" Guid="e582813c-3902-486d-82e8-e140250dd7f6" InformativeScreenshot="1100944e11be928ceebd5761c797585a.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="0902ebe5-1cdf-4e44-8bd9-5f903d2deb8d" CvElementArea="86, 633, 570, 50" CvTextArea="340, 645, 63, 27" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="89, 635, 567, 46" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Login' tableRow='1' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Login' type='' tag='BUTTON' class='btn btn-primary loginButton' check:text='Login' /&gt;" Guid="c6b993de-5da1-4166-bf6a-3ca0452723d7" InformativeScreenshot="5ff69ebfb5959684fd68c65c5f5ea6c5.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable CVScreenId="2acb63cc-ac4a-4ee9-9773-dc6c5ff04c00" CvTextArea="352, 447, 288, 18" CvTextArgument="Captcha expired. Please refresh captcha" CvType="Text" DesignTimeRectangle="355, 447, 300, 27" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='errorMessageContainer text-left ng-binding' aaname='                                                                                                                                  Captcha expired. Please refresh captcha.                                                             ' check:text='Captcha expired. Please refresh captcha.' /&gt;" Guid="21897537-1685-4bbe-84ab-959d135799e3" InformativeScreenshot="e78302cf5ff3dfbcb14dc5e5a9f13345.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Skip for now'" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85fc30c3-f5a4-4641-8cda-84ab86ed1316" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="2b3441ff-fb3b-4d95-9d9d-fe30c037ebaa" CvTextArea="326, 548, 91, 20" CvTextArgument="Skip for now" CvType="Text" DesignTimeRectangle="321, 547, 102, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='skip' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='skip' tag='BUTTON' type='submit' class='link-button-remindme ng-scope' aaname='                                         Skip for now                                     ' check:text='Skip for now' /&gt;" Guid="e26ec620-8b89-45d2-989b-aa1dadcaf7c9" InformativeScreenshot="521fc21501cb70ed123add1686324e6d.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Phone Number' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="588, 105, 744, 840" FilePath="C:\Program Files (x86)\WK\ProSystem fx Suite\Smart Client\SaaS\cch.commonuiframework.shell.exe" IconBase64="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" InformativeScreenshot="a640434e62cc1de5d20e8e38e99a5abe.png" Selector="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" Title="Wolters Kluwer Login" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
